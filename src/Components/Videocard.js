@@ -26,4 +26,7 @@ const Videocard = ({ info }) => {
   );
 };
 
+
+
+
 export default Videocard;
