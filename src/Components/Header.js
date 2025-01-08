@@ -19,10 +19,10 @@ const Header = () => {
     dispatch(toggleMenu());
   };
   return (
-    <div className="grid grid-flow-col p-5 m-2 shadow-lg">
-      <div className="flex col-span-1 ">
+    <div className="grid grid-flow-col p-5 m-2 ">
+      <div className="flex col-span-1  ">
         <img
-          className="h-8 cursor-pointer"
+          className="w-4 h-8 cursor-pointer"
           onClick={() => toggleMenuHandler()}
           src="https://53.fs1.hubspotusercontent-na1.net/hub/53/hubfs/What%20is%20a%20Hamburger%20Button.png?width=225&name=What%20is%20a%20Hamburger%20Button.png "
           alt=""
@@ -38,7 +38,7 @@ const Header = () => {
       <div className="col-span-10 text-center">
         <input
           type="text"
-          className="bg-red-300 w-1/2 p-2 border border-gray-400 rounded-l-full "
+          className="bg-slate-100 w-1/2 p-2 border border-gray-400 rounded-l-full mb-2" placeholder="Search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
