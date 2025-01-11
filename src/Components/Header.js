@@ -1,12 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { toggleMenu } from "./utils/appSlice";
 import { useDispatch } from "react-redux";
+import { BsSearch } from "react-icons/bs";
+import { FaBell, FaMicrophone } from 'react-icons/fa';
+import { IoMdContact } from 'react-icons/io';
+
+
+
+
 
 const Header = () => {
   const [searchQuery, setSearchQuery] = useState();
-
-  console.log(searchQuery);
-  
 
    useEffect(() => {
 
@@ -35,25 +39,30 @@ const Header = () => {
         />
       </div>
 
-      <div className="col-span-10 text-center">
+      <div className=" flex col-span-10 text-center justify-center items-center ">
         <input
           type="text"
-          className="bg-slate-100 w-1/2 p-2 border border-gray-400 rounded-l-full mb-2" placeholder="Search"
+          className=" w-1/2 p-2 border border-gray-400 rounded-l-full mb-2 " placeholder="Search"
           value={searchQuery}
           onChange={(e) => setSearchQuery(e.target.value)}
         />
 
-        <button className="p-2 border border-gray-400 rounded-r-full">
-          Search
+        <button className="p-3 border border-gray-400 rounded-r-full mb-2">
+        <BsSearch />
         </button>
+        <div  className=' ml-4 bg-gray-100 rounded-full w-11 h-10 hover:bg-slate-200'>
+        <FaMicrophone className='text-2xl ml-2.5 m-1.5' />
+          </div>
+
       </div>
 
-      <div className="col-span-1">
-        <img
-          className="h-4"
-          src="https://static-00.iconduck.com/assets.00/user-icon-470x512-joawnpv1.png"
-          alt=""
-        />
+      <div className='flex col-span-1 items-center'>
+      <div  className=' rounded-full w-11 h-10 hover:bg-slate-100'>
+        <FaBell className='text-2xl m-1.5'/>
+        </div>
+        <div  className=' px-1 rounded-full w-10 h-10'>
+        <IoMdContact className='text-4xl -mt-0'/>
+        </div>
       </div>
     </div>
   );

@@ -169,7 +169,7 @@ const CommentList = ({ comments }) => {
     return (
       comments.map((comment,index) => (
       <div className="p-2">
-        <Comment key={index} data={comment} />
+        <Comment key={comment.id} data={comment} />
         
         <div className="pl-6    text-gray-950">
         <hr/>
