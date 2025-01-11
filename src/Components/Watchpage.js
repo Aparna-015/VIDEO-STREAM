@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "./utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
-import LiveChat from "./LiveChat";
+// import LiveChat from "./LiveChat";
 import { YOUTUBE_VIDEOS_BYID } from "./utils/Constant";
 // import { HiUserCircle } from "react-icons/hi2";
 import { IoMdContact } from 'react-icons/io';
@@ -47,17 +47,17 @@ const Watchpage = () => {
         </div>
 
         <div className="w-1/3 ml-4">
-          <LiveChat />
+          {/* <LiveChat /> */}
         </div>
       </div>
 
       {videoInfo.map((item) => (
-        <div key={item.id} className="mt-2 ">
+        <div key={item.id} className="mt-2 w-[950px] ">
           <h1 className="font-bold text-xl flex-wrap text-left ml-8 my-3">
             {item?.snippet?.title}
           </h1>
           <div className="flex">
-            <div className="flex  ml-20 my-4">
+            <div className="flex  ml-8 mb-4">
               <div  className='px-1 rounded-full w-10 h-10'>
                       
                 <IoMdContact className='text-4xl mt-2'/>
@@ -80,7 +80,12 @@ const Watchpage = () => {
                 </li>
                 <li>
                   <button className="flex bg-white mx-2 text-white shadow-sm px-2 py-1 rounded-full ml-6 hover:bg-gray-300">
-                    
+                    -----------
+                  </button>
+                  </li> 
+                   <li>
+                  <button className="flex bg-white mx-2 text-white shadow-sm px-2 py-1 rounded-full ml-6 hover:bg-gray-300">
+                    -----------
                   </button>
                   </li>  
 
@@ -97,6 +102,11 @@ const Watchpage = () => {
                 <li>
                   <button className="bg-black px-2 py-1 text-white rounded-full ml-2 hover:bg-gray-300">
                     Download
+                  </button>
+                </li>
+                <li>
+                  <button className="bg-black px-2 py-1 text-white rounded-full ml-2 hover:bg-gray-300">
+                    ....
                   </button>
                 </li>
               </ul>
