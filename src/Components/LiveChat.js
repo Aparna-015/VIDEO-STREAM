@@ -27,7 +27,7 @@ const LiveChat = () => {
 
   return (
     <>
-      <div className="w-[400px]  h-[500px]  ml-2 p-2 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">
+      <div className="w-[400px]  h-[450px]  ml-2 p-2 border border-black bg-slate-100 rounded-lg overflow-y-scroll flex flex-col-reverse">
         <div>
           {chatMessages.map((c, index) => (
             <Chatmessage key={index} name={c.name} message={c.message} />
@@ -49,16 +49,16 @@ const LiveChat = () => {
         }}
       >
 
-        <input
-          className="w-96 border border-slate-100 "
-          type="text"
-          value={Livemessage}
-          placeholder="send message......"
-          onChange={(e) => {
-            setLivemessage(e.target.value);
-          }}
-        />
-        <button className="px-2  bg-green-100">Send</button>
+<input
+  class="w-96 p-2 border border-gray-300 rounded-lg text-base focus:outline-none "
+  type="text"
+  value={Livemessage}
+  placeholder="Send message..."
+  onChange={(e) => setLivemessage(e.target.value)}
+/>
+<button class="py-1 bg-black text-white rounded-lg hover:bg-green-200 ">
+  Send
+</button>
       </form>
       </div>
     </>

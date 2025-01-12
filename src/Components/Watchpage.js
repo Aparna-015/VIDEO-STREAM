@@ -3,7 +3,7 @@ import { useDispatch } from "react-redux";
 import { closeMenu } from "./utils/appSlice";
 import { useSearchParams } from "react-router-dom";
 import CommentsContainer from "./CommentsContainer";
-// import LiveChat from "./LiveChat";
+ import LiveChat from "./LiveChat";
 import { YOUTUBE_VIDEOS_BYID } from "./utils/Constant";
 // import { HiUserCircle } from "react-icons/hi2";
 import { IoMdContact } from 'react-icons/io';
@@ -32,11 +32,12 @@ const Watchpage = () => {
 
   return (
     <div className="flex flex-col w-full">
-      <div className="flex flex-row px-5 m-4">
+      <div className="flex flex-row px-5 m-2">
         <div className="flex-row">
           <iframe
+          className='rounded-lg'
             width="900"
-            height="550"
+            height="500"
             src={`https://www.youtube.com/embed/${videoId}`}
             title="YouTube video player"
             frameBorder="0"
@@ -47,20 +48,20 @@ const Watchpage = () => {
         </div>
 
         <div className="w-1/3 ml-4">
-          {/* <LiveChat /> */}
+           <LiveChat /> 
         </div>
       </div>
 
       {videoInfo.map((item) => (
-        <div key={item.id} className="mt-2 w-[950px] ">
-          <h1 className="font-bold text-xl flex-wrap text-left ml-8 my-3">
+        <div key={item.id} className="w-[950px] ">
+          <h1 className="font-bold text-xl flex-wrap text-left ml-8 my-2">
             {item?.snippet?.title}
           </h1>
           <div className="flex">
-            <div className="flex  ml-8 mb-4">
+            <div className="flex  ml-8 mb-2">
               <div  className='px-1 rounded-full w-10 h-10'>
                       
-                <IoMdContact className='text-4xl mt-2'/>
+                <IoMdContact className='text-4xl mt-4'/>
                       </div>
               <ul className="flex  my-4">
                 <li className="font-bold text-black ml-2">
@@ -112,10 +113,10 @@ const Watchpage = () => {
               </ul>
             </div>
           </div>
-          <div className="ml-4 rounded-lg shadow-sm bg-gray-100 p-2 my-4 w-[900px]">
+          <div className="ml-8 rounded-lg shadow-sm bg-gray-100 p-2 my-2 w-[900px]">
             <p className="font-bold text-left">
               5k Views{" "}
-              <span className="mx-2">{item?.snippet?.publishedAt}</span>
+              {/* <span className="mx-2">{item?.snippet?.publishedAt}</span> */}
             </p>
             <p className="font-normal text-left">
               {item?.snippet?.description}

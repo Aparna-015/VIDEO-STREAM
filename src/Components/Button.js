@@ -9,7 +9,7 @@ const Button = (props) => {
    {btns.map((item)=>(
     <div key={item}>
     
-  <button className=' px-3 py-1 m-3 bg-slate-200 border rounded-lg font-bold'>{item}</button>
+  <button className=' px-3 py-1 m-3 bg-slate-200 border rounded-lg '>{item}</button>
 
   </div>))   
 }
