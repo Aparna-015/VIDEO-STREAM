@@ -50,13 +50,13 @@ const LiveChat = () => {
       >
 
 <input
-  class="w-96 p-2 border border-gray-300 rounded-lg text-base focus:outline-none "
+  class="w-96 focus:outline-none  "
   type="text"
   value={Livemessage}
   placeholder="Send message..."
   onChange={(e) => setLivemessage(e.target.value)}
 />
-<button class="py-1 bg-black text-white rounded-lg hover:bg-green-200 ">
+<button className="bg-gray-100  rounded-full" >
   Send
 </button>
       </form>
@@ -64,5 +64,5 @@ const LiveChat = () => {
     </>
   );
 };
-
+ 
 export default LiveChat;

@@ -54,7 +54,7 @@ const Watchpage = () => {
 
       {videoInfo.map((item) => (
         <div key={item.id} className="w-[950px] ">
-          <h1 className="font-bold text-xl flex-wrap text-left ml-8 my-2">
+          <h1 className="font-bold text-xl flex-wrap text-left ml-8 ">
             {item?.snippet?.title}
           </h1>
           <div className="flex">
@@ -115,7 +115,7 @@ const Watchpage = () => {
           </div>
           <div className="ml-8 rounded-lg shadow-sm bg-gray-100 p-2 my-2 w-[900px]">
             <p className="font-bold text-left">
-              5k Views{" "}
+              170 M Views{" "}
               {/* <span className="mx-2">{item?.snippet?.publishedAt}</span> */}
             </p>
             <p className="font-normal text-left">

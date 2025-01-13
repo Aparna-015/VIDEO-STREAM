@@ -32,7 +32,7 @@ const Sidebar = () => {
         <span>Home</span> 
       </Link>
     </li>
-      <li className='my-4 flex items-center gap-2' ><SiYoutubeshorts /> <span>shorts</span> </li>
+      <li className='my-4 flex items-center gap-2' ><SiYoutubeshorts /> <span>Shorts</span> </li>
       <li className='my-4 flex items-center gap-2'><MdVideoSettings /><span>Videos</span> </li>
       <li className='my-4 flex items-center gap-2' ><RiLiveFill />
       <span>Live</span></li>
