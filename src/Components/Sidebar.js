@@ -53,7 +53,7 @@ const Sidebar = () => {
       <ul>
       
       <li className='my-4 flex items-center gap-2' ><MdOutlineSportsHandball />
-      <span> sports </span></li>
+      <span> Sports </span></li>
       <li className='my-4 flex items-center gap-2' > <GiFilmSpool />
       <span>Films</span> </li>
       <li className='my-4 flex items-center gap-2' ><GiLoveSong />
